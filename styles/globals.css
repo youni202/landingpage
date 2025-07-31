@@ -1,0 +1,1588 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 14px;
+  --background: #1f2937;
+  --foreground: #f9fafb;
+  --card: #374151;
+  --card-foreground: #f9fafb;
+  --popover: #374151;
+  --popover-foreground: #f9fafb;
+  --primary: #6366f1;
+  --primary-foreground: #ffffff;
+  --secondary: #8b5cf6;
+  --secondary-foreground: #ffffff;
+  --muted: #4b5563;
+  --muted-foreground: #d1d5db;
+  --accent: #a855f7;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #374151;
+  --input: #374151;
+  --input-background: #374151;
+  --switch-background: #6b7280;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #6366f1;
+  --chart-1: #6366f1;
+  --chart-2: #a855f7;
+  --chart-3: #06b6d4;
+  --chart-4: #10b981;
+  --chart-5: #f59e0b;
+  --radius: 0.5rem;
+  --sidebar: #374151;
+  --sidebar-foreground: #f9fafb;
+  --sidebar-primary: #6366f1;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #4b5563;
+  --sidebar-accent-foreground: #f9fafb;
+  --sidebar-border: #4b5563;
+  --sidebar-ring: #6366f1;
+
+  /* Light mode variables for admin dashboard */
+  --admin-background: #ffffff;
+  --admin-foreground: #111827;
+  --admin-card: #ffffff;
+  --admin-card-foreground: #111827;
+  --admin-popover: #ffffff;
+  --admin-popover-foreground: #111827;
+  --admin-primary: #2563eb;
+  --admin-primary-foreground: #ffffff;
+  --admin-secondary: #f3f4f6;
+  --admin-secondary-foreground: #374151;
+  --admin-muted: #f9fafb;
+  --admin-muted-foreground: #6b7280;
+  --admin-accent: #f3f4f6;
+  --admin-accent-foreground: #111827;
+  --admin-destructive: #dc2626;
+  --admin-destructive-foreground: #ffffff;
+  --admin-border: #e5e7eb;
+  --admin-input: #ffffff;
+  --admin-input-background: #ffffff;
+  --admin-ring: #2563eb;
+}
+
+.dark {
+  --background: #1f2937;
+  --foreground: #f9fafb;
+  --card: #374151;
+  --card-foreground: #f9fafb;
+  --popover: #374151;
+  --popover-foreground: #f9fafb;
+  --primary: #6366f1;
+  --primary-foreground: #ffffff;
+  --secondary: #8b5cf6;
+  --secondary-foreground: #ffffff;
+  --muted: #4b5563;
+  --muted-foreground: #d1d5db;
+  --accent: #a855f7;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #374151;
+  --input: #374151;
+  --ring: #6366f1;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: #6366f1;
+  --chart-2: #a855f7;
+  --chart-3: #06b6d4;
+  --chart-4: #10b981;
+  --chart-5: #f59e0b;
+  --sidebar: #374151;
+  --sidebar-foreground: #f9fafb;
+  --sidebar-primary: #6366f1;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #4b5563;
+  --sidebar-accent-foreground: #f9fafb;
+  --sidebar-border: #4b5563;
+  --sidebar-ring: #6366f1;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Light mode theme for admin */
+  --color-admin-background: var(--admin-background);
+  --color-admin-foreground: var(--admin-foreground);
+  --color-admin-card: var(--admin-card);
+  --color-admin-card-foreground: var(--admin-card-foreground);
+  --color-admin-primary: var(--admin-primary);
+  --color-admin-primary-foreground: var(--admin-primary-foreground);
+  --color-admin-secondary: var(--admin-secondary);
+  --color-admin-secondary-foreground: var(--admin-secondary-foreground);
+  --color-admin-muted: var(--admin-muted);
+  --color-admin-muted-foreground: var(--admin-muted-foreground);
+  --color-admin-border: var(--admin-border);
+  --color-admin-input: var(--admin-input);
+  --color-admin-ring: var(--admin-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: 2.25rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    h3 {
+      font-size: 1.875rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    h5 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    label {
+      font-size: 0.875rem;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    /* Enhanced input field visibility */
+    input[type="text"],
+    input[type="email"], 
+    input[type="password"],
+    input[type="number"],
+    input[type="date"],
+    input[type="datetime-local"],
+    input[type="url"],
+    textarea,
+    select {
+      border: 2px solid #d1d5db !important;
+      background-color: #ffffff !important;
+      color: #111827 !important;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus, 
+    input[type="password"]:focus,
+    input[type="number"]:focus,
+    input[type="date"]:focus,
+    input[type="datetime-local"]:focus,
+    input[type="url"]:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #6366f1 !important;
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1) !important;
+    }
+
+    /* Placeholder text visibility */
+    input::placeholder,
+    textarea::placeholder {
+      color: #6b7280 !important;
+      opacity: 0.8 !important;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+
+/* ===== EMERGENCY BUTTON FLICKER PREVENTION ===== */
+/* This CSS rule MUST be at the very top to override everything */
+
+/* IMMEDIATE OVERRIDE - Apply to everything that could be a button */
+button, [role="button"], .btn, [class*="button"], [data-button], input[type="button"], input[type="submit"], input[type="reset"] {
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+  will-change: auto !important;
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+  animation-play-state: paused !important;
+  animation-iteration-count: 0 !important;
+  animation-fill-mode: none !important;
+  animation-delay: 0s !important;
+  transition-delay: 0s !important;
+  transition-timing-function: step-start !important;
+  transition-property: none !important;
+  backface-visibility: visible !important;
+}
+
+/* Override ANY possible hover state */
+button:hover, button:active, button:focus,
+[role="button"]:hover, [role="button"]:active, [role="button"]:focus,
+.btn:hover, .btn:active, .btn:focus,
+[class*="button"]:hover, [class*="button"]:active, [class*="button"]:focus {
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+}
+
+/* ===== NUCLEAR BUTTON ANIMATION PREVENTION ===== */
+
+/* Allow simple color transitions for everything except buttons and button-like elements */
+*:not(button):not([role="button"]):not(.btn):not([class*="button"]):not([data-button]):not(input[type="button"]):not(input[type="submit"]):not(input[type="reset"]):not([onclick]):not([class*="bg-primary"]):not([class*="border-primary"]):not([class*="hover:"]):not([class*="focus:"]):not([class*="active:"]) {
+  transition-property: color, background-color, border-color, opacity, box-shadow;
+  transition-timing-function: ease;
+  transition-duration: 200ms;
+}
+
+/* NUCLEAR OPTION: Completely disable ALL animations and transitions for buttons */
+button,
+button *,
+button **,
+[role="button"],
+[role="button"] *,
+[role="button"] **,
+.btn,
+.btn *,
+.btn **,
+[class*="button"],
+[class*="button"] *,
+[class*="button"] **,
+[data-button],
+[data-button] *,
+[data-button] **,
+input[type="button"],
+input[type="button"] *,
+input[type="submit"],
+input[type="submit"] *,
+input[type="reset"],
+input[type="reset"] *,
+.button,
+.button *,
+[aria-role="button"],
+[aria-role="button"] *,
+[onclick],
+[onclick] *,
+/* ShadCN and Tailwind button classes */
+.bg-primary,
+.bg-primary *,
+.border-primary,
+.border-primary *,
+.hover\:bg-primary,
+.hover\:bg-primary *,
+.hover\:border-primary,
+.hover\:border-primary *,
+.focus\:bg-primary,
+.focus\:bg-primary *,
+.active\:bg-primary,
+.active\:bg-primary *,
+.text-primary-foreground,
+.text-primary-foreground *,
+/* Additional Tailwind classes that might affect buttons */
+.gradient-primary,
+.gradient-primary *,
+.hover\:shadow-lg,
+.hover\:shadow-lg *,
+.shadow-lg,
+.shadow-lg *,
+/* Button variants */
+.variant-outline,
+.variant-outline *,
+.variant-secondary,
+.variant-secondary *,
+.variant-ghost,
+.variant-ghost *,
+.variant-link,
+.variant-link *,
+/* Size variants */
+.size-sm,
+.size-sm *,
+.size-lg,
+.size-lg *,
+.size-xl,
+.size-xl *,
+/* Custom button selectors */
+[class*="cursor-pointer"],
+[class*="cursor-pointer"] *,
+/* Framer Motion components that might be buttons */
+.motion-button,
+.motion-button * {
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+  will-change: auto !important;
+  backface-visibility: visible !important;
+  animation-duration: 0s !important;
+  animation-delay: 0s !important;
+  animation-iteration-count: 0 !important;
+  animation-fill-mode: none !important;
+  animation-play-state: paused !important;
+  transition-duration: 0s !important;
+  transition-delay: 0s !important;
+  transition-timing-function: step-start !important;
+  transition-property: none !important;
+}
+
+/* Prevent any possible flickering during ANY interaction */
+button:not(:focus):not(:hover):not(:active):not(:disabled):not(:checked),
+button *:not(:focus):not(:hover):not(:active):not(:disabled):not(:checked),
+[role="button"]:not(:focus):not(:hover):not(:active):not(:disabled):not(:checked),
+[role="button"] *:not(:focus):not(:hover):not(:active):not(:disabled):not(:checked),
+.btn:not(:focus):not(:hover):not(:active):not(:disabled):not(:checked),
+.btn *:not(:focus):not(:hover):not(:active):not(:disabled):not(:checked),
+[class*="button"]:not(:focus):not(:hover):not(:active):not(:disabled):not(:checked),
+[class*="button"] *:not(:focus):not(:hover):not(:active):not(:disabled):not(:checked),
+[data-button]:not(:focus):not(:hover):not(:active):not(:disabled):not(:checked),
+[data-button] *:not(:focus):not(:hover):not(:active):not(:disabled):not(:checked) {
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+  will-change: auto !important;
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+}
+
+/* Disable hover effects for buttons - ULTRA STRICT */
+button:hover,
+button:hover *,
+button *:hover,
+[role="button"]:hover,
+[role="button"]:hover *,
+[role="button"] *:hover,
+.btn:hover,
+.btn:hover *,
+.btn *:hover,
+[class*="button"]:hover,
+[class*="button"]:hover *,
+[class*="button"] *:hover,
+[data-button]:hover,
+[data-button]:hover *,
+[data-button] *:hover {
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+}
+
+/* Disable active effects for buttons - ULTRA STRICT */
+button:active,
+button:active *,
+button *:active,
+[role="button"]:active,
+[role="button"]:active *,
+[role="button"] *:active,
+.btn:active,
+.btn:active *,
+.btn *:active,
+[class*="button"]:active,
+[class*="button"]:active *,
+[class*="button"] *:active,
+[data-button]:active,
+[data-button]:active *,
+[data-button] *:active {
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+}
+
+/* Disable focus effects for buttons - ULTRA STRICT */
+button:focus,
+button:focus *,
+button *:focus,
+[role="button"]:focus,
+[role="button"]:focus *,
+[role="button"] *:focus,
+.btn:focus,
+.btn:focus *,
+.btn *:focus,
+[class*="button"]:focus,
+[class*="button"]:focus *,
+[class*="button"] *:focus,
+[data-button]:focus,
+[data-button]:focus *,
+[data-button] *:focus {
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+}
+
+/* Prevent any pseudo-element animations on buttons */
+button::before,
+button::after,
+button *::before,
+button *::after,
+[role="button"]::before,
+[role="button"]::after,
+[role="button"] *::before,
+[role="button"] *::after,
+.btn::before,
+.btn::after,
+.btn *::before,
+.btn *::after,
+[class*="button"]::before,
+[class*="button"]::after,
+[class*="button"] *::before,
+[class*="button"] *::after,
+[data-button]::before,
+[data-button]::after,
+[data-button] *::before,
+[data-button] *::after {
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+}
+
+/* Prevent any possible state changes during mouse movement */
+button:not(:active):not(:focus):not(:hover):not(:disabled):not(:checked):not(:selected),
+[role="button"]:not(:active):not(:focus):not(:hover):not(:disabled):not(:checked):not(:selected),
+.btn:not(:active):not(:focus):not(:hover):not(:disabled):not(:checked):not(:selected),
+[class*="button"]:not(:active):not(:focus):not(:hover):not(:disabled):not(:checked):not(:selected),
+[data-button]:not(:active):not(:focus):not(:hover):not(:disabled):not(:checked):not(:selected) {
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+  will-change: auto !important;
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+  animation-play-state: paused !important;
+}
+
+/* Override any possible Tailwind hover/focus/active classes */
+.hover\:bg-primary\:hover,
+.hover\:border-primary\:hover,
+.hover\:text-primary-foreground\:hover,
+.hover\:shadow-lg\:hover,
+.focus\:bg-primary\:focus,
+.focus\:border-primary\:focus,
+.focus\:text-primary-foreground\:focus,
+.active\:bg-primary\:active,
+.active\:border-primary\:active,
+.active\:text-primary-foreground\:active {
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+}
+
+/* Prevent any CSS-in-JS style transitions */
+button[style*="transition"],
+button[style*="animation"],
+button[style*="transform"],
+[role="button"][style*="transition"],
+[role="button"][style*="animation"],
+[role="button"][style*="transform"],
+.btn[style*="transition"],
+.btn[style*="animation"],
+.btn[style*="transform"],
+[class*="button"][style*="transition"],
+[class*="button"][style*="animation"],
+[class*="button"][style*="transform"] {
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+}
+
+/* Override any possible third-party CSS */
+button[class],
+button[class] *,
+[role="button"][class],
+[role="button"][class] *,
+.btn[class],
+.btn[class] *,
+[class*="button"][class],
+[class*="button"][class] *,
+[data-button][class],
+[data-button][class] * {
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+}
+
+/* FINAL NUCLEAR OPTION: Override everything that could possibly affect buttons */
+* button,
+* button *,
+* [role="button"],
+* [role="button"] *,
+* .btn,
+* .btn *,
+* [class*="button"],
+* [class*="button"] *,
+* [data-button],
+* [data-button] *,
+* input[type="button"],
+* input[type="submit"],
+* input[type="reset"],
+body button,
+body button *,
+body [role="button"],
+body [role="button"] *,
+body .btn,
+body .btn *,
+body [class*="button"],
+body [class*="button"] *,
+body [data-button],
+body [data-button] *,
+html button,
+html button *,
+html [role="button"],
+html [role="button"] *,
+html .btn,
+html .btn *,
+html [class*="button"],
+html [class*="button"] *,
+html [data-button],
+html [data-button] * {
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+  will-change: auto !important;
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+  animation-play-state: paused !important;
+  animation-fill-mode: none !important;
+  animation-iteration-count: 0 !important;
+  animation-delay: 0s !important;
+  transition-delay: 0s !important;
+  transition-timing-function: step-start !important;
+  transition-property: none !important;
+}
+
+/* Prevent any possible flickering from CSS custom properties */
+button {
+  --tw-translate-x: 0 !important;
+  --tw-translate-y: 0 !important;
+  --tw-rotate: 0 !important;
+  --tw-skew-x: 0 !important;
+  --tw-skew-y: 0 !important;
+  --tw-scale-x: 1 !important;
+  --tw-scale-y: 1 !important;
+  --tw-ring-offset-shadow: 0 0 #0000 !important;
+  --tw-ring-shadow: 0 0 #0000 !important;
+  --tw-shadow: 0 0 #0000 !important;
+  --tw-shadow-colored: 0 0 #0000 !important;
+}
+
+/* Prevent any possible state-based flickering */
+button:not(:disabled):not([disabled]):not([aria-disabled="true"]),
+[role="button"]:not(:disabled):not([disabled]):not([aria-disabled="true"]),
+.btn:not(:disabled):not([disabled]):not([aria-disabled="true"]),
+[class*="button"]:not(:disabled):not([disabled]):not([aria-disabled="true"]),
+[data-button]:not(:disabled):not([disabled]):not([aria-disabled="true"]) {
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+}
+
+/* Prevent any CSS Grid or Flexbox related transitions */
+button,
+button *,
+[role="button"],
+[role="button"] *,
+.btn,
+.btn *,
+[class*="button"],
+[class*="button"] *,
+[data-button],
+[data-button] * {
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+  /* Prevent any layout-based animations */
+  transition-property: none !important;
+  animation-name: none !important;
+  animation-timing-function: step-start !important;
+  animation-iteration-count: 0 !important;
+  animation-direction: normal !important;
+  animation-fill-mode: none !important;
+  animation-play-state: paused !important;
+}
+
+/* Custom gradient utilities - no animations */
+.gradient-primary {
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 0 rgba(99, 102, 241, 0.8);
+}
+
+/* Enhanced contrast for tags and special text */
+.text-primary {
+  color: #7c3aed !important; /* Brighter purple for better contrast */
+}
+
+.text-muted-foreground {
+  color: #e5e7eb !important; /* Much brighter gray for better readability */
+}
+
+/* Enhanced text visibility for dark backgrounds */
+.enhanced-text {
+  color: #f3f4f6 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.enhanced-primary-text {
+  color: #8b5cf6 !important; /* Bright violet for better visibility */
+  font-weight: 600;
+}
+
+/* Enhanced badge and tag visibility */
+.tag-enhanced {
+  background-color: rgba(139, 92, 246, 0.2) !important;
+  border: 1px solid #8b5cf6 !important;
+  color: #c4b5fd !important;
+  font-weight: 500;
+}
+
+.badge-enhanced {
+  background-color: rgba(99, 102, 241, 0.2) !important;
+  border: 1px solid #6366f1 !important;
+  color: #c7d2fe !important;
+  font-weight: 500;
+}
+
+/* Enhanced button visibility for outline variants */
+.button-outline-enhanced {
+  border: 2px solid #8b5cf6 !important;
+  color: #c4b5fd !important;
+  background-color: rgba(139, 92, 246, 0.1) !important;
+  font-weight: 500;
+}
+
+.button-outline-enhanced:hover {
+  background-color: #8b5cf6 !important;
+  color: #ffffff !important;
+}
+
+/* Static hover states for buttons - only color changes */
+.hover-gradient {
+  /* No transitions for buttons */
+}
+
+.hover-gradient:hover {
+  /* Static background - no transitions */
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+}
+
+/* ===== KEYFRAME ANIMATIONS - NOT FOR BUTTONS ===== */
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ===== ANIMATION UTILITY CLASSES - NOT FOR BUTTONS ===== */
+
+.animate-float:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-slide-up:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  animation: slide-up 0.5s ease-out;
+}
+
+.animate-slide-in-left:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  animation: slide-in-left 0.5s ease-out;
+}
+
+.animate-slide-in-right:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  animation: slide-in-right 0.5s ease-out;
+}
+
+.animate-fade-in:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  animation: fade-in 0.5s ease-out;
+}
+
+.animate-scale-in:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  animation: scale-in 0.3s ease-out;
+}
+
+/* ===== HOVER EFFECTS - DISABLED FOR BUTTONS ===== */
+
+.hover-lift:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-lift:not(button):not([role="button"]):not(.btn):not([class*="button"]):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hover-scale:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  transition: transform 0.2s ease;
+}
+
+.hover-scale:not(button):not([role="button"]):not(.btn):not([class*="button"]):hover {
+  transform: scale(1.05);
+}
+
+.hover-glow:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:not(button):not([role="button"]):not(.btn):not([class*="button"]):hover {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+}
+
+.hover-border-grow:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-border-grow:not(button):not([role="button"]):not(.btn):not([class*="button"])::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  transition: width 0.3s ease;
+}
+
+.hover-border-grow:not(button):not([role="button"]):not(.btn):not([class*="button"]):hover::before {
+  width: 100%;
+}
+
+/* ===== ENHANCED BACKDROP EFFECTS ===== */
+
+.backdrop-blur-sm {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.backdrop-blur-md {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-effect {
+  background: rgba(55, 65, 81, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== ENHANCED SHADOWS ===== */
+
+.shadow-float {
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.08),
+              0 4px 15px rgba(168, 85, 247, 0.06);
+}
+
+.shadow-glow {
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.12),
+              0 0 25px rgba(168, 85, 247, 0.08);
+}
+
+.shadow-inner-glow {
+  box-shadow: inset 0 2px 4px 0 rgba(99, 102, 241, 0.08);
+}
+
+/* ===== FOCUS STATES - DISABLED FOR BUTTONS ===== */
+
+.focus-ring:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  transition: box-shadow 0.2s ease;
+}
+
+.focus-ring:not(button):not([role="button"]):not(.btn):not([class*="button"]):focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* ===== SCROLL ANIMATIONS - ONLY RUN ONCE ===== */
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.stagger-children.revealed > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-children.revealed > *:nth-child(1) { transition-delay: 0.1s; }
+.stagger-children.revealed > *:nth-child(2) { transition-delay: 0.2s; }
+.stagger-children.revealed > *:nth-child(3) { transition-delay: 0.3s; }
+.stagger-children.revealed > *:nth-child(4) { transition-delay: 0.4s; }
+.stagger-children.revealed > *:nth-child(5) { transition-delay: 0.5s; }
+.stagger-children.revealed > *:nth-child(6) { transition-delay: 0.6s; }
+
+/* ===== COMPLETELY STATIC BUTTONS ===== */
+
+.interactive-card:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button-press {
+  /* No press effects - completely static for buttons */
+}
+
+/* ===== STATIC ANIMATED COMPONENTS - NOT FOR BUTTONS ===== */
+
+.animated-underline:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  position: relative;
+  text-decoration: none;
+}
+
+.animated-underline:not(button):not([role="button"]):not(.btn):not([class*="button"])::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  transition: width 0.3s ease;
+}
+
+.animated-underline:not(button):not([role="button"]):not(.btn):not([class*="button"]):hover::after {
+  width: 100%;
+}
+
+/* No morphing effects for buttons */
+.morphing-button {
+  /* Static button - no morphing */
+}
+
+/* ===== LOADING ANIMATIONS ===== */
+
+.loading-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* ===== ENHANCED MICRO ANIMATIONS - NOT FOR BUTTONS ===== */
+
+.micro-bounce:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.micro-bounce:not(button):not([role="button"]):not(.btn):not([class*="button"]):hover {
+  transform: scale(1.05);
+}
+
+.gentle-fade:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.gentle-fade:not(button):not([role="button"]):not(.btn):not([class*="button"]):hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+.slide-reveal:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.rotate-on-hover:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  transition: transform 0.3s ease;
+}
+
+.rotate-on-hover:not(button):not([role="button"]):not(.btn):not([class*="button"]):hover {
+  transform: rotate(5deg);
+}
+
+.text-shimmer:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  background: linear-gradient(90deg, #f9fafb 25%, #ffffff 50%, #f9fafb 75%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ===== ENHANCED CARD ANIMATIONS ===== */
+
+.card-float:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: center;
+}
+
+.card-float:not(button):not([role="button"]):not(.btn):not([class*="button"]):hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(99, 102, 241, 0.15),
+              0 8px 25px rgba(168, 85, 247, 0.1);
+}
+
+.card-tilt:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.card-tilt:not(button):not([role="button"]):not(.btn):not([class*="button"]):hover {
+  transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+}
+
+.card-glow:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card-glow:not(button):not([role="button"]):not(.btn):not([class*="button"])::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.05) 0%, transparent 70%);
+  transform: scale(0);
+  transition: transform 0.5s ease;
+  pointer-events: none;
+}
+
+.card-glow:not(button):not([role="button"]):not(.btn):not([class*="button"]):hover::before {
+  transform: scale(1);
+}
+
+/* ===== ENHANCED TEXT ANIMATIONS ===== */
+
+.text-slide-up:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.text-slide-up.revealed:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.text-typewriter:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  overflow: hidden;
+  border-right: 2px solid #6366f1;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #6366f1; }
+}
+
+.gradient-text-animated:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  background: linear-gradient(45deg, #6366f1, #a855f7, #06b6d4, #6366f1);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== ENHANCED HOVER INTERACTIONS ===== */
+
+.hover-expand:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.hover-expand:not(button):not([role="button"]):not(.btn):not([class*="button"])::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+}
+
+.hover-expand:not(button):not([role="button"]):not(.btn):not([class*="button"]):hover::before {
+  width: 300%;
+  height: 300%;
+}
+
+.hover-slide-border:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  position: relative;
+  border: 2px solid transparent;
+  background: linear-gradient(var(--card), var(--card)) padding-box,
+              linear-gradient(45deg, #6366f1, #a855f7) border-box;
+  transition: all 0.3s ease;
+}
+
+.hover-slide-border:not(button):not([role="button"]):not(.btn):not([class*="button"]):hover {
+  background: linear-gradient(var(--card), var(--card)) padding-box,
+              linear-gradient(45deg, #a855f7, #06b6d4) border-box;
+  transform: translateY(-2px);
+}
+
+/* ===== STAGGERED ANIMATIONS ===== */
+
+.stagger-container:not(button):not([role="button"]):not(.btn):not([class*="button"]) > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.stagger-container:not(button):not([role="button"]):not(.btn):not([class*="button"]) > *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.stagger-container:not(button):not([role="button"]):not(.btn):not([class*="button"]) > *:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.stagger-container:not(button):not([role="button"]):not(.btn):not([class*="button"]) > *:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.stagger-container:not(button):not([role="button"]):not(.btn):not([class*="button"]) > *:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.stagger-container:not(button):not([role="button"]):not(.btn):not([class*="button"]) > *:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+/* ===== ENHANCED SCROLL REVEAL ===== */
+
+.scroll-reveal-up:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-reveal-up.revealed:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-reveal-left:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-reveal-left.revealed:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scroll-reveal-right:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-reveal-right.revealed:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scroll-reveal-scale:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-reveal-scale.revealed:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ===== ENHANCED LOADING STATES ===== */
+
+.skeleton-loading:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  background: linear-gradient(90deg, #374151 25%, #4b5563 50%, #374151 75%);
+  background-size: 200% 100%;
+  animation: skeleton-wave 2s ease-in-out infinite;
+}
+
+@keyframes skeleton-wave {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.loading-dots:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  position: relative;
+}
+
+.loading-dots:not(button):not([role="button"]):not(.btn):not([class*="button"])::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #6366f1;
+  animation: loading-dots-animation 1.4s ease-in-out infinite both;
+}
+
+@keyframes loading-dots-animation {
+  0%, 80%, 100% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ===== ENHANCED FOCUS STATES ===== */
+
+.focus-glow:not(button):not([role="button"]):not(.btn):not([class*="button"]):focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3),
+              0 0 20px rgba(99, 102, 241, 0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.focus-slide:not(button):not([role="button"]):not(.btn):not([class*="button"]):focus {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}
+
+/* ===== RESPONSIVE ANIMATIONS ===== */
+
+@media (max-width: 768px) {
+  .card-float:not(button):not([role="button"]):not(.btn):not([class*="button"]):hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+  
+  .hover-expand:not(button):not([role="button"]):not(.btn):not([class*="button"])::before {
+    display: none;
+  }
+}
+
+/* ===== ENHANCED PROGRESS ANIMATIONS ===== */
+
+.progress-bar:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  background: linear-gradient(90deg, #6366f1 0%, #a855f7 100%);
+  animation: progress-fill 2s ease-out forwards;
+}
+
+@keyframes progress-fill {
+  from { width: 0%; }
+  to { width: var(--progress-width, 100%); }
+}
+
+.counter-animation:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  animation: count-up 2s ease-out forwards;
+}
+
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== ENHANCED MODAL ANIMATIONS ===== */
+
+.modal-backdrop {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: backdrop-fade-in 0.3s ease;
+}
+
+@keyframes backdrop-fade-in {
+  from { opacity: 0; backdrop-filter: blur(0px); }
+  to { opacity: 1; backdrop-filter: blur(8px); }
+}
+
+.modal-slide-up:not(button):not([role="button"]):not(.btn):not([class*="button"]) {
+  animation: modal-slide-up-animation 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes modal-slide-up-animation {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ===== LIGHT MODE ADMIN STYLES ===== */
+
+/* Light mode admin dashboard overrides */
+.admin-light {
+  background-color: var(--admin-background);
+  color: var(--admin-foreground);
+}
+
+.admin-light .bg-card {
+  background-color: var(--admin-card);
+}
+
+.admin-light .text-card-foreground {
+  color: var(--admin-card-foreground);
+}
+
+.admin-light .border-border {
+  border-color: var(--admin-border);
+}
+
+.admin-light .bg-primary {
+  background-color: var(--admin-primary);
+}
+
+.admin-light .text-primary-foreground {
+  color: var(--admin-primary-foreground);
+}
+
+.admin-light .bg-muted {
+  background-color: var(--admin-muted);
+}
+
+.admin-light .text-muted-foreground {
+  color: var(--admin-muted-foreground);
+}
+
+.admin-light .bg-input {
+  background-color: var(--admin-input);
+}
+
+/* Light mode table styles */
+.admin-light table {
+  background-color: var(--admin-card);
+}
+
+.admin-light th {
+  background-color: var(--admin-muted);
+  color: var(--admin-foreground);
+  border-color: var(--admin-border);
+}
+
+.admin-light td {
+  border-color: var(--admin-border);
+  color: var(--admin-foreground);
+}
+
+.admin-light tr:hover {
+  background-color: var(--admin-muted);
+}
+
+/* Light mode button styles for admin */
+.admin-light button {
+  border-color: var(--admin-border);
+}
+
+.admin-light .button-primary {
+  background-color: var(--admin-primary);
+  color: var(--admin-primary-foreground);
+}
+
+.admin-light .button-secondary {
+  background-color: var(--admin-secondary);
+  color: var(--admin-secondary-foreground);
+}
+
+/* Light mode form styles */
+.admin-light input,
+.admin-light textarea,
+.admin-light select {
+  background-color: var(--admin-input) !important;
+  border: 2px solid var(--admin-border) !important;
+  color: var(--admin-foreground) !important;
+}
+
+.admin-light input:focus,
+.admin-light textarea:focus,
+.admin-light select:focus {
+  border-color: var(--admin-primary) !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Admin light mode placeholder */
+.admin-light input::placeholder,
+.admin-light textarea::placeholder {
+  color: #6b7280 !important;
+  opacity: 0.8 !important;
+}
+
+/* Admin light mode select dropdown visibility */
+.admin-light [data-slot="select-content"] {
+  background-color: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+.admin-light [data-slot="select-item"] {
+  color: #111827 !important;
+  background-color: transparent !important;
+}
+
+.admin-light [data-slot="select-item"]:hover,
+.admin-light [data-slot="select-item"][data-state="checked"] {
+  background-color: #f3f4f6 !important;
+  color: #111827 !important;
+}
+
+.admin-light [data-slot="select-item"][data-highlighted] {
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+}
+
+.admin-light [data-slot="select-trigger"] {
+  background-color: #ffffff !important;
+  border: 2px solid #e5e7eb !important;
+  color: #111827 !important;
+}
+
+.admin-light [data-slot="select-trigger"]:focus {
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Admin light mode delete button hover */
+.admin-light .hover\:text-red-600:hover {
+  color: #dc2626 !important;
+  background-color: #fef2f2 !important;
+}
+
+/* Admin light mode cancel button improvements */
+.admin-light .border-gray-200 {
+  border-color: #d1d5db !important;
+}
+
+.admin-light .text-gray-600 {
+  color: #374151 !important;
+}
+
+.admin-light button[variant="outline"] {
+  border-color: #d1d5db !important;
+  color: #374151 !important;
+  background-color: #ffffff !important;
+}
+
+.admin-light button[variant="outline"]:hover {
+  background-color: #f9fafb !important;
+  border-color: #9ca3af !important;
+}
+
+/* ===== ACCESSIBILITY - REDUCED MOTION ===== */
+
+@media (prefers-reduced-motion: reduce) {
+  *:not(button):not([role="button"]):not(.btn):not([class*="button"]),
+  *:not(button):not([role="button"]):not(.btn):not([class*="button"])::before,
+  *:not(button):not([role="button"]):not(.btn):not([class*="button"])::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  /* Keep buttons completely static even with reduced motion */
+  button,
+  [role="button"],
+  .btn,
+  [class*="button"],
+  button *,
+  [role="button"] *,
+  .btn *,
+  [class*="button"] * {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
